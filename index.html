@@ -526,7 +526,8 @@ const ROUNDED_STAR_PATH = "M12,2.5c1.1,0,2.1,0.6,2.5,1.6l2.6,5.9l6.4,0.6c1.1,0.1
 const HIGHLIGHT_CIRCLE = '<circle cx="16" cy="9" r="2" fill="white" opacity="0.6"/>';
 
 const levels = {
-    insects: { name: '微观世界', theme: '奇妙昆虫', img: '昆虫.png', color: '#AED581', items: [
+    // 🔴 修改：原为 '昆虫.png'，改为 'insects.png' (对应 key 名)
+    insects: { name: '微观世界', theme: '奇妙昆虫', img: `insects${IMG_EXT}`, color: '#AED581', items: [
        { id: 'lad', word: 'Ladybug', cn: '瓢虫', top: '40%', left: '15%' },
         { id: 'but', word: 'Butterfly', cn: '蝴蝶', top: '30%', left: '50%' },
         { id: 'bee', word: 'Bee', cn: '蜜蜂', top: '35%', left: '75%' },
@@ -536,7 +537,8 @@ const levels = {
         { id: 'spi', word: 'Spider', cn: '蜘蛛', top: '85%', left: '20%' },
         { id: 'sna', word: 'Snail', cn: '蜗牛', top: '90%', left: '50%' }
     ]},
-    colors: { name: '色彩启蒙', theme: '多彩颜料', img: '颜色.png', color: '#7986CB', items: [
+    // 🔴 修改：原为 '颜色.png'，改为 'colors.png'
+    colors: { name: '色彩启蒙', theme: '多彩颜料', img: `colors${IMG_EXT}`, color: '#7986CB', items: [
         { id: 'blu', word: 'Blue', cn: '蓝色', top: '20%', left: '25%' },
         { id: 'yel', word: 'Yellow', cn: '黄色', top: '20%', left: '50%' },
         { id: 'pur', word: 'Purple', cn: '紫色', top: '20%', left: '75%' },
@@ -547,7 +549,8 @@ const levels = {
         { id: 'ora', word: 'Orange', cn: '橙色', top: '70%', left: '65%' },
         { id: 'whi', word: 'White', cn: '白色', top: '65%', left: '88%' }
     ]},
-    birds: { name: '天空精灵', theme: '认识鸟类', img: '鸟类.png', color: '#4DD0E1', items: [
+    // 🔴 修改：原为 '鸟类.png'，改为 'birds.png'
+    birds: { name: '天空精灵', theme: '认识鸟类', img: `birds${IMG_EXT}`, color: '#4DD0E1', items: [
         { id: 'spa', word: 'Sparrow', cn: '麻雀', top: '20%', left: '15%' },
         { id: 'pig', word: 'Pigeon', cn: '鸽子', top: '20%', left: '40%' },
         { id: 'par', word: 'Parrot', cn: '鹦鹉', top: '25%', left: '60%' },
@@ -557,6 +560,7 @@ const levels = {
         { id: 'woo', word: 'Woodpecker', cn: '啄木鸟', top: '60%', left: '85%' },
         { id: 'nes', word: 'Nest', cn: '鸟巢', top: '75%', left: '15%' }
     ]},
+    // ✅ 原代码正确 (使用了 animals${IMG_EXT})
     animals: { name: '热闹动物园', theme: '自然生物', img: `animals${IMG_EXT}`, color: '#FF8A80', items: [
         { id: 'gir', word: 'Giraffe', cn: '长颈鹿', top: '30%', left: '15%' },
         { id: 'ele', word: 'Elephant', cn: '大象', top: '35%', left: '45%' },
@@ -566,6 +570,7 @@ const levels = {
         { id: 'mon', word: 'Monkey', cn: '猴子', top: '20%', left: '80%' },
         { id: 'tre', word: 'Tree', cn: '树', top: '60%', left: '60%' }
     ]},
+    // ✅ 原代码正确
     marine: { name: '奇幻海洋馆', theme: '深海探秘', img: `marine${IMG_EXT}`, color: '#4FC3F7', items: [
         { id: 'jel', word: 'Jellyfish', cn: '水母', top: '20%', left: '60%' },
         { id: 'sta', word: 'Starfish', cn: '海星', top: '25%', left: '35%' },
@@ -575,6 +580,7 @@ const levels = {
         { id: 'she', word: 'Shell', cn: '贝壳', top: '25%', left: '15%' },
         { id: 'cor', word: 'Coral', cn: '珊瑚', top: '75%', left: '15%' }
     ]},
+    // ✅ 原代码正确
     fruit: { name: '鲜美水果摊', theme: '健康饮食', img: `fruit${IMG_EXT}`, color: '#FFD54F', items: [
         { id: 'wat', word: 'Watermelon', cn: '西瓜', top: '50%', left: '50%' },
         { id: 'ban', word: 'Banana', cn: '香蕉', top: '85%', left: '14%' },
@@ -585,6 +591,7 @@ const levels = {
         { id: 'lem', word: 'Lemon', cn: '柠檬', top: '80%', left: '85%' },
         { id: 'str', word: 'Strawberry', cn: '草莓', top: '80%', left: '50%' }
     ]},
+    // ✅ 原代码正确
     clothes: { name: '时尚穿搭', theme: '日常生活', img: `clothes${IMG_EXT}`, color: '#81C784', items: [
         { id: 'coa', word: 'Coat', cn: '外套', top: '35%', left: '22%' },
         { id: 'hat', word: 'Hat', cn: '帽子', top: '25%', left: '48%' },
@@ -594,7 +601,8 @@ const levels = {
         { id: 'soc', word: 'Socks', cn: '袜子', top: '80%', left: '82%' },
         { id: 'boo', word: 'Boots', cn: '靴子', top: '85%', left: '30%' }
     ]},
-    stationery: { name: '小小文具店', theme: '学习用品', img: '文具.png', color: '#AB47BC', items: [
+    // 🔴 修改：原为 '文具.png'，改为 'stationery.png'
+    stationery: { name: '小小文具店', theme: '学习用品', img: `stationery${IMG_EXT}`, color: '#AB47BC', items: [
         { id: 'rul', word: 'Ruler', cn: '直尺', top: '85%', left: '25%' },
         { id: 'pen', word: 'Pencil', cn: '铅笔', top: '50%', left: '18%' },
         { id: 'era', word: 'Eraser', cn: '橡皮', top: '70%', left: '8%' },
@@ -604,7 +612,8 @@ const levels = {
         { id: 'hol', word: 'Pen Holder', cn: '笔筒', top: '25%', left: '65%' },
         { id: 'ope', word: 'Notepad', cn: '记事本', top: '65%', left: '53%' }
     ]},
-    art: { name: '缤纷画室', theme: '艺术创作', img: '画具.png', color: '#26C6DA', items: [
+    // 🔴 修改：原为 '画具.png'，改为 'art.png'
+    art: { name: '缤纷画室', theme: '艺术创作', img: `art${IMG_EXT}`, color: '#26C6DA', items: [
         { id: 'buc', word: 'Bucket', cn: '水桶', top: '30%', left: '22%' },
         { id: 'pal', word: 'Palette', cn: '调色盘', top: '70%', left: '20%' },
         { id: 'bru', word: 'Paintbrush', cn: '画笔', top: '65%', left: '40%' },
@@ -612,7 +621,8 @@ const levels = {
         { id: 'pai', word: 'Paints', cn: '颜料', top: '28%', left: '53%' },
         { id: 'eas', word: 'Easel', cn: '画架', top: '45%', left: '78%' }
     ]},
-    vegetables: { name: '健康菜篮子', theme: '田园时光', img: '蔬菜.png', color: '#FF7043', items: [
+    // 🔴 修改：原为 '蔬菜.png'，改为 'vegetables.png'
+    vegetables: { name: '健康菜篮子', theme: '田园时光', img: `vegetables${IMG_EXT}`, color: '#FF7043', items: [
         { id: 'car', word: 'Carrot', cn: '胡萝卜', top: '45%', left: '15%' },
         { id: 'tom', word: 'Tomato', cn: '西红柿', top: '30%', left: '35%' },
         { id: 'cuc', word: 'Cucumber', cn: '黄瓜', top: '45%', left: '45%' },
@@ -621,7 +631,8 @@ const levels = {
         { id: 'pum', word: 'Pumpkin', cn: '南瓜', top: '60%', left: '85%' },
         { id: 'gre', word: 'Vegetable', cn: '青菜', top: '20%', left: '75%' }
     ]},
-    occupations: { name: '职业大百科', theme: '社会分工', img: '职业.png', color: '#5C6BC0', items: [
+    // 🔴 修改：原为 '职业.png'，改为 'occupations.png'
+    occupations: { name: '职业大百科', theme: '社会分工', img: `occupations${IMG_EXT}`, color: '#5C6BC0', items: [
         { id: 'doc', word: 'Doctor', cn: '医生', top: '45%', left: '15%' },
          { id: 'nur', word: 'Nurse', cn: '护士', top: '10%', left: '75%' },
         { id: 'pol', word: 'Police', cn: '警察', top: '45%', left: '82%' },
@@ -631,8 +642,8 @@ const levels = {
         { id: 'wor', word: 'Worker', cn: '工人', top: '60%', left: '65%' },
          { id: 'stu', word: 'Student', cn: '学生', top: '70%', left: '25%' }
     ]},
-
-    vehicles: { name: '车水马龙', theme: '交通工具', img: '交通工具.png', color: '#EF5350', items: [
+    // 🔴 修改：原为 '交通工具.png'，改为 'vehicles.png'
+    vehicles: { name: '车水马龙', theme: '交通工具', img: `vehicles${IMG_EXT}`, color: '#EF5350', items: [
         { id: 'bic', word: 'Bicycle', cn: '自行车', top: '25%', left: '18%' },
          { id: 'bus', word: 'Bus', cn: '公交车', top: '35%', left: '50%' },
         { id: 'amb', word: 'Ambulance', cn: '救护车', top: '38%', left: '82%' }, 
@@ -641,8 +652,8 @@ const levels = {
         { id: 'sco', word: 'Scooter', cn: '滑板车', top: '85%', left: '45%' },
         { id: 'fit', word: 'Fire Truck', cn: '消防车', top: '80%', left: '78%' }
     ]},
-
-    trees: { name: '森林植物', theme: '自然探索', img: '树木.png', color: '#66BB6A', items: [
+    // 🔴 修改：原为 '树木.png'，改为 'trees.png'
+    trees: { name: '森林植物', theme: '自然探索', img: `trees${IMG_EXT}`, color: '#66BB6A', items: [
         { id: 'pin', word: 'Pine Tree', cn: '松树', top: '42%', left: '15%' }, 
         { id: 'map', word: 'Maple Leaf', cn: '枫叶', top: '42%', left: '38%' },
         { id: 'oak', word: 'Oak Tree', cn: '橡树', top: '42%', left: '62%' }, 
@@ -651,8 +662,8 @@ const levels = {
          { id: 'big', word: 'Big Tree', cn: '大树', top: '75%', left: '50%' },
         { id: 'gin', word: 'Ginkgo', cn: '银杏', top: '78%', left: '75%' }
     ]},
-
-    balls: { name: '球类运动', theme: '健康生活', img: '球类.png', color: '#FFA726', items: [
+    // 🔴 修改：原为 '球类.png'，改为 'balls.png'
+    balls: { name: '球类运动', theme: '健康生活', img: `balls${IMG_EXT}`, color: '#FFA726', items: [
         { id: 'bas', word: 'Basketball', cn: '篮球', top: '30%', left: '70%' },
          { id: 'soc', word: 'Soccer', cn: '足球', top: '25%', left: '30%' },
         { id: 'vol', word: 'Volleyball', cn: '排球', top: '33%', left: '50%' }, 
@@ -663,7 +674,8 @@ const levels = {
         { id: 'bad', word: 'Badminton', cn: '羽毛球', top: '88%', left: '55%' },
         { id: 'pin', word: 'Ping Pong', cn: '乒乓球', top: '82%', left: '22%' }
     ]},
-    drinks: { name: '美味饮品', theme: '清凉解渴', img: '饮品.png', color: '#FFB74D', items: [
+    // 🔴 修改：原为 '饮品.png'，改为 'drinks.png'
+    drinks: { name: '美味饮品', theme: '清凉解渴', img: `drinks${IMG_EXT}`, color: '#FFB74D', items: [
         { id: 'mil', word: 'Milk', cn: '牛奶', top: '45%', left: '10%' },
         { id: 'jui', word: 'Juice', cn: '果汁', top: '25%', left: '26%' },
         { id: 'tea', word: 'Iced Tea', cn: '冰茶', top: '65%', left: '38%' },
@@ -672,7 +684,8 @@ const levels = {
         { id: 'wat', word: 'Water', cn: '矿泉水', top: '20%', left: '72%' },
         { id: 'lem', word: 'Lemonade', cn: '柠檬水', top: '45%', left: '88%' }
     ]},
-    tools: { name: '生活工具', theme: '小小工匠', img: '工具.png', color: '#90A4AE', items: [
+    // 🔴 修改：原为 '工具.png'，改为 'tools.png'
+    tools: { name: '生活工具', theme: '小小工匠', img: `tools${IMG_EXT}`, color: '#90A4AE', items: [
         { id: 'ham', word: 'Hammer', cn: '锤子', top: '30%', left: '10%' },
         { id: 'scr', word: 'Screwdriver', cn: '螺丝刀', top: '55%', left: '23%' },
         { id: 'saw', word: 'Saw', cn: '锯子', top: '40%', left: '35%' },
@@ -681,7 +694,8 @@ const levels = {
         { id: 'nai', word: 'Screw', cn: '螺丝', top: '70%', left: '73%' },
         { id: 'dri', word: 'Drill', cn: '电钻', top: '25%', left: '86%' }
     ]},
-    furniture: { name: '温馨家园', theme: '日常家具', img: '家具.png', color: '#8D6E63', items: [
+    // 🔴 修改：原为 '家具.png'，改为 'furniture.png'
+    furniture: { name: '温馨家园', theme: '日常家具', img: `furniture${IMG_EXT}`, color: '#8D6E63', items: [
         { id: 'sof', word: 'Sofa', cn: '沙发', top: '45%', left: '20%' },
         { id: 'lam', word: 'Lamp', cn: '落地灯', top: '25%', left: '46%' },
         { id: 'tv', word: 'TV', cn: '电视', top: '30%', left: '65%' },
@@ -691,7 +705,8 @@ const levels = {
         { id: 'rug', word: 'Rug', cn: '地毯', top: '85%', left: '45%' },
         { id: 'cha', word: 'Chair', cn: '椅子', top: '75%', left: '90%' }
     ]},
-    flags: { name: '世界国旗', theme: '认识国家', img: '国旗.png', color: '#EF5350', items: [
+    // 🔴 修改：原为 '国旗.png'，改为 'flags.png'
+    flags: { name: '世界国旗', theme: '认识国家', img: `flags${IMG_EXT}`, color: '#EF5350', items: [
         { id: 'ger', word: 'Germany', cn: '德国', top: '28%', left: '20%' },
         { id: 'uk', word: 'UK', cn: '英国', top: '28%', left: '50%' },
         { id: 'usa', word: 'USA', cn: '美国', top: '28%', left: '80%' },
